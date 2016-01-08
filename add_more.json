@@ -1,0 +1,11 @@
+{
+  "signals": [
+    {
+      "action": "node_update",
+      "id": "<BE COFFEE ID>",
+      "properties": {
+        "started_in": 2015
+      }
+    }
+  ]
+}

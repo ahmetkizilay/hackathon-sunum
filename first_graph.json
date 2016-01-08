@@ -1,0 +1,21 @@
+{
+  "name": "First Graph",
+  "signals": [
+    {
+      "action": "node_create",
+      "type": "Person",
+      "name": "Ahmet",
+      "properties": {
+        "age": 30
+      }
+    },
+    {
+      "action": "edge_create",
+      "from_type": "Person",
+      "from_name": "Ahmet",
+      "name": "BUYS_COFFEE_FROM",
+      "to_type": "Coffee Shop",
+      "to_name": "Be Coffee"
+    }
+  ]
+}
