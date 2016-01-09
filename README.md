@@ -100,6 +100,7 @@ http POST 'http://localhost:3000/api/v1/graphs' \
 'Content-type:application/json' < first_graph.json \
 --verbose
 ```
+[first_graph.json](first_graph.json)
 
 Graph'a yeni sinyaller ekleyelim
 ```sh
@@ -111,6 +112,7 @@ http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450
 'Content-type:application/json' < add_more.json \
 --verbose
 ```
+[add_more.json](add_more.json)
 
 Graph'i adi ve tanimini degistirelim
 ```sh
@@ -121,6 +123,7 @@ http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450
 'Content-type:application/json' < update_graph_name.json \
 --verbose
 ```
+[update_graph_name.json](update_graph_name.json)
 
 ### Ornek Uygulamalar
 
