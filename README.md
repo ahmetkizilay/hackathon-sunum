@@ -8,7 +8,7 @@
 
 Bir arama yapalim.
 ```sh
-# calling: /search
+# calling: GET /search
 # query=third wave
 # limit=2
 http 'http://localhost:3000/api/v1/search?query=third wave&limit=2' \
@@ -18,7 +18,7 @@ http 'http://localhost:3000/api/v1/search?query=third wave&limit=2' \
 
 Graph'in tum bilgilerine bakalim.
 ```sh
-# calling: /graphs/:id
+# calling: GET /graphs/:id
 # graph-id=c7a0590c-60cf-49ca-910a-1bd5940ce2c2
 http 'http://localhost:3000/api/v1/graphs/c7a0590c-60cf-49ca-910a-1bd5940ce2c2' \
 	   'Authentication:sk_0tPydJjFUebHd3lD501sag' \
@@ -27,7 +27,7 @@ http 'http://localhost:3000/api/v1/graphs/c7a0590c-60cf-49ca-910a-1bd5940ce2c2' 
 
 Graph'in sadece tiplerine bakalim.
 ```sh
-# calling: /graphs/:id/types
+# calling: GET /graphs/:id/types
 # graph-id=c7a0590c-60cf-49ca-910a-1bd5940ce2c2
 http 'http://localhost:3000/api/v1/graphs/c7a0590c-60cf-49ca-910a-1bd5940ce2c2/types' \
 	   'Authentication:sk_0tPydJjFUebHd3lD501sag' \
@@ -36,7 +36,7 @@ http 'http://localhost:3000/api/v1/graphs/c7a0590c-60cf-49ca-910a-1bd5940ce2c2/t
 
 Node'a detayli bakalim
 ```sh
-# calling: /nodes/:id
+# calling: GET /nodes/:id
 # node-id-id=046eec3f-11ab-3598-cd52-5d68b4235348 (dara)
 http 'http://localhost:3000/api/v1/nodes/046eec3f-11ab-3598-cd52-5d68b4235348' \
 	   'Authentication:sk_0tPydJjFUebHd3lD501sag' \
@@ -45,7 +45,7 @@ http 'http://localhost:3000/api/v1/nodes/046eec3f-11ab-3598-cd52-5d68b4235348' \
 
 Iki node arasi patikalar
 ```sh
-# calling /graphs/:id/paths
+# calling GET /graphs/:id/paths
 # graph-id=c7a0590c-60cf-49ca-910a-1bd5940ce2c2 (Third Wave Coffee)
 # from=626fe375-d55a-873f-91c4-5f6df6f0d560 (Ahmet)
 # to=046eec3f-11ab-3598-cd52-5d68b4235348 (Dara)
@@ -56,7 +56,7 @@ http 'http://localhost:3000/api/v1/graphs/c7a0590c-60cf-49ca-910a-1bd5940ce2c2/p
 
 Detayli patikalar
 ```sh
-# calling: /graphs/:id/paths
+# calling: GET /graphs/:id/paths
 # graph-id=c7a0590c-60cf-49ca-910a-1bd5940ce2c2 (Third Wave Coffee)
 # from=626fe375-d55a-873f-91c4-5f6df6f0d560 (Ahmet)
 # totype=Restaurant
@@ -94,7 +94,7 @@ Sinyal ornekleri
 
 Yeni graph yaratalim
 ```sh
-# first_graph.json icinde sinyaller
+# calling POST /graphs/:id
 http POST 'http://localhost:3000/api/v1/graphs' \
 'Authentication:sk_0tPydJjFUebHd3lD501sag' \
 'Content-type:application/json' < first_graph.json \
@@ -104,9 +104,8 @@ http POST 'http://localhost:3000/api/v1/graphs' \
 
 Graph'a yeni sinyaller ekleyelim
 ```sh
-# sinyalleri guncelle
 # graph-id ?
-# add_more.json icinde sinyaller
+# calling PUT /graphs/:id
 http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450f7/add' \
 'Authentication:sk_0tPydJjFUebHd3lD501sag' \
 'Content-type:application/json' < add_more.json \
@@ -116,6 +115,7 @@ http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450
 
 Graph'i adi ve tanimini degistirelim
 ```sh
+# calling PUT /graphs/:id
 # graph-id=36e44c55-728d-4bb8-8911-0ca99f6450f7
 # update_graph_name.json icinde sinyaller
 http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450f7' \
@@ -127,7 +127,7 @@ http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450
 
 ### Ornek Uygulamalar
 
-#### Linked-in entegrasyonu
+#### LinkedIn entegrasyonu
 
 > http://52.34.250.205/
 
