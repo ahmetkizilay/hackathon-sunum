@@ -16,7 +16,7 @@ http 'http://localhost:3000/api/v1/search?query=third wave&limit=2' \
 	   'Content-type:application/json'
 ```
 
-Graph'in bilgilerine bakalim.
+Graph'in tum bilgilerine bakalim.
 ```sh
 # calling: /graphs/:id
 # graph-id=c7a0590c-60cf-49ca-910a-1bd5940ce2c2
@@ -130,4 +130,9 @@ http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450
 
 #### Slack entegrasyonu
 
-> graphcommons.slack.com
+> https://graphcommons.slack.com
+
+
+#### API Kutuphaneleri
+
+> http://graphcommons.github.io/api-v1/#libraries-amp-examples
