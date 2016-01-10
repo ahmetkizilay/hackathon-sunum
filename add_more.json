@@ -1,8 +1,9 @@
 {
   "signals": [
     {
-      "action": "node_update",
-      "id": "<BE COFFEE ID>",
+      "action": "node_create",
+      "type": "Coffee Shop",
+      "name": "Be Coffee",
       "properties": {
         "started_in": 2015
       }

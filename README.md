@@ -105,7 +105,7 @@ http POST 'http://localhost:3000/api/v1/graphs' \
 Graph'a yeni sinyaller ekleyelim
 ```sh
 # graph-id ?
-# calling PUT /graphs/:id
+# calling PUT /graphs/:id/add
 http PUT 'http://localhost:3000/api/v1/graphs/36e44c55-728d-4bb8-8911-0ca99f6450f7/add' \
 'Authentication:sk_0tPydJjFUebHd3lD501sag' \
 'Content-type:application/json' < add_more.json \
